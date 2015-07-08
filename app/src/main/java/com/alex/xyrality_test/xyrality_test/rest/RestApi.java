@@ -8,7 +8,6 @@ import retrofit.http.Field;
 import retrofit.http.FormUrlEncoded;
 import retrofit.http.POST;
 
-
 public interface RestApi {
 
     @FormUrlEncoded

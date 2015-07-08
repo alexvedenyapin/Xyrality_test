@@ -7,6 +7,6 @@
     <string name="pass">Password</string>
     <string name="send_data">Send your data</string>
     <string name="please_wait">Please Wait!</string>
-    <string name="worlds_loading">Worlds are being loaded...</string>
+    <string name="worlds_loading">Worlds are being loaded..</string>
 
 </resources>

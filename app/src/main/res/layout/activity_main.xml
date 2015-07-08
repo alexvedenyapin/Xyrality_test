@@ -13,39 +13,39 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/emailEt"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email"/>
+        <EditText
+            android:id="@+id/emailEt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/passEt"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/emailEt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:hint="@string/pass"/>
+        <EditText
+            android:id="@+id/passEt"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/emailEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:hint="@string/pass" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/emailEt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:text="@string/enter_your_credentials" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/emailEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:text="@string/enter_your_credentials" />
 
-    <Button
-        android:id="@+id/sendDataBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passEt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/send_data"/>
+        <Button
+            android:id="@+id/sendDataBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passEt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/send_data" />
 
     </RelativeLayout>
 
@@ -53,8 +53,7 @@
         android:id="@+id/worldsLv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="gone">
-    </ListView>
+        android:visibility="gone" />
 
 
 </RelativeLayout>

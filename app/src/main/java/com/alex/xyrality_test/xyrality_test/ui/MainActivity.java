@@ -27,8 +27,7 @@ import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText email;
     private EditText password;
@@ -75,7 +74,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (retainedFragment == null) {
             retainedFragment = new RetainedFragment();
             fm.beginTransaction().add(retainedFragment, RetainedFragment.TAG).commit();
-
         } else {
             World[] worlds = retainedFragment.getWorlds();
             showWorlds(worlds);
