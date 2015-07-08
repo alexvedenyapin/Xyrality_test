@@ -1,7 +1,27 @@
 package com.alex.xyrality_test.xyrality_test.fragments;
 
-/**
- * Created by Alex Vedenyapin on 7/8/2015.
- */
-public class RetainedFragment {
+import android.app.Fragment;
+import android.os.Bundle;
+
+import com.alex.xyrality_test.xyrality_test.rest.results.World;
+
+public class RetainedFragment extends Fragment{
+
+    public static final String TAG = "retained_fragment";
+
+    private World[] mWorlds;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setRetainInstance(true);
+    }
+
+    public void setWorlds(World[] worlds) {
+        mWorlds = worlds;
+    }
+
+    public World[] getWorlds() {
+        return mWorlds;
+    }
 }

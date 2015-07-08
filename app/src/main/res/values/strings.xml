@@ -6,7 +6,7 @@
     <string name="email">Email</string>
     <string name="pass">Password</string>
     <string name="send_data">Send your data</string>
-    <string name="title_activity_worlds_list">WorldsListActivity</string>
+    <string name="please_wait">Please Wait!</string>
+    <string name="worlds_loading">Worlds are being loaded...</string>
 
-    <string name="hello_world">Hello world!</string>
 </resources>
