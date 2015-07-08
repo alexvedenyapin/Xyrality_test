@@ -1,7 +1,11 @@
 package com.alex.xyrality_test.xyrality_test.ui;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -51,11 +55,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void loginUserToServer() {
-        String login = "android1.test@xyrality.com";
-        String password = "123456qwertyu";
-        String deviceType = "Android.Nexus61";
-        String deviceId = "23464677893256873";
+        String login = getLogin();
+        String password = getPassword();
+        String deviceType = getDeviceType();
+        String deviceId = getDeviceId();
         RestClient.INSTANCE.getRestApi().getWorlds(login, password, deviceType, deviceId, mCallback);
+    }
+
+    private String getLogin() {
+        if (!TextUtils.isEmpty(email.getText().toString())) {
+            return email.getText().toString();
+        }
+
+        return "android.test@xyrality.com";
+    }
+
+    private String getPassword() {
+        if (!TextUtils.isEmpty(password.getText().toString())) {
+            return password.getText().toString();
+        }
+
+        return "defaultPassrord";
+    }
+
+    private String getDeviceType() {
+        String model = android.os.Build.MODEL;
+        String version = android.os.Build.VERSION.RELEASE;
+
+        return String.format("%s %s", model, version);
+    }
+
+    private String getDeviceId() {
+        WifiManager manager = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+        WifiInfo info = manager.getConnectionInfo();
+
+        return info.getMacAddress();
     }
 
     private Callback<WorldsResult> mCallback = new Callback<WorldsResult>() {
