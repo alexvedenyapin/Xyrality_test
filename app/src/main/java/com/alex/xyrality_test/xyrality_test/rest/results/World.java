@@ -28,4 +28,8 @@ public class World {
             this.description = description;
         }
     }
+
+    public String getName() {
+        return name;
+    }
 }
