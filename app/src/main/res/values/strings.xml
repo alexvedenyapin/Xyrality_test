@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Xyrality_test</string>
+
+    <string name="enter_your_credentials">Please, enter your credentials</string>
+    <string name="action_settings">Settings</string>
+    <string name="email">Email</string>
+    <string name="pass">Password</string>
+    <string name="send_data">Send your data</string>
+</resources>
